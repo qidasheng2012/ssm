@@ -24,6 +24,7 @@
         <jwt.version>0.7.0</jwt.version>
         <sfjson.version>2.4</sfjson.version>
         <commons.version>3.4</commons.version>
+        <commons-collections.version>3.2.1</commons-collections.version>
         <fastjson.version>1.2.12</fastjson.version>
         <pagehelper.version>4.0.0</pagehelper.version>
         <jedis.version>2.7.3</jedis.version>
