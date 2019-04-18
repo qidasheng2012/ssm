@@ -1,11 +1,14 @@
 package com.ssm.vo;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
+@Data
 public class StudentVO implements Serializable {
 
     /**编号 */
@@ -23,54 +26,4 @@ public class StudentVO implements Serializable {
     /**性别 */
     private String stuGender;
 
-    public Integer getStuId() {
-        return stuId;
-    }
-
-    public void setStuId(Integer stuId) {
-        this.stuId = stuId;
-    }
-
-    public Integer getStuNumber() {
-        return stuNumber;
-    }
-
-    public void setStuNumber(Integer stuNumber) {
-        this.stuNumber = stuNumber;
-    }
-
-    public String getStuName() {
-        return stuName;
-    }
-
-    public void setStuName(String stuName) {
-        this.stuName = stuName;
-    }
-
-    public Integer getStuAge() {
-        return stuAge;
-    }
-
-    public void setStuAge(Integer stuAge) {
-        this.stuAge = stuAge;
-    }
-
-    public String getStuGender() {
-        return stuGender;
-    }
-
-    public void setStuGender(String stuGender) {
-        this.stuGender = stuGender;
-    }
-
-    @Override
-    public String toString() {
-        return "StudentVO{" +
-                "stuId=" + stuId +
-                ", stuNumber=" + stuNumber +
-                ", stuName='" + stuName + '\'' +
-                ", stuAge=" + stuAge +
-                ", stuGender='" + stuGender + '\'' +
-                '}';
-    }
 }

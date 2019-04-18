@@ -11,8 +11,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 /**
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 public class UrlFilesToZip {
 	private static final Logger logger = LogManager.getLogger(UrlFilesToZip.class);

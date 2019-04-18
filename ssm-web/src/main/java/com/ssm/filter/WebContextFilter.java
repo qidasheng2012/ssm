@@ -6,8 +6,8 @@ import java.io.IOException;
 
 /**
  * 跨域资源共享
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 public class WebContextFilter implements Filter {
  

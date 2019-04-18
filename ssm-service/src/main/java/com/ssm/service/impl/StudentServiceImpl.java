@@ -14,11 +14,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 @Service
-public class StudentServiceImlp extends Page implements StudentService {
+public class StudentServiceImpl extends Page implements StudentService {
 
     @Autowired
     StudentMapper studentMapper;

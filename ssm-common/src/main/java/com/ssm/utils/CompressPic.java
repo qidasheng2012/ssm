@@ -12,8 +12,8 @@ import java.io.IOException;
 
 /**
  * 压缩图片流工具
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 public class CompressPic {
 

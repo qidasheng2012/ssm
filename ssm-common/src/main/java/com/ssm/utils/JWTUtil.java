@@ -11,8 +11,8 @@ import java.util.Date;
 
 /**
  * API调用认证工具类，采用RSA加密
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 public class JWTUtil {
 	

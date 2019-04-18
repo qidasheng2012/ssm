@@ -5,8 +5,8 @@ import com.ssm.vo.StudentVO;
 import java.util.List;
 
 /**
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 public interface StudentMapper {
 

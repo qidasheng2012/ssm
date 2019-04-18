@@ -7,8 +7,8 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 import java.io.Serializable;
 
 /**
- * @author YoriChen
- * @date 2018/5/21
+ * @author qp
+ * @date 2019/5/1
  */
 public class BaseCriteria extends Page implements Serializable {
     private static final long serialVersionUID = 3951999513152846225L;
