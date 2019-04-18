@@ -1,6 +1,7 @@
 package com.ssm.enums;
 
 /**
+ * 响应编号
  * @author qp
  * @date 2019/5/1
  */

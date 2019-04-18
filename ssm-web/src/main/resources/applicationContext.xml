@@ -16,9 +16,6 @@
     <!-- 引入业务集成域 -->
     <import resource="classpath:/applicationContext-service.xml"/>
 
-    <!-- 引入spring动作跳转 -->
-    <import resource="classpath:/applicationContext-web.xml"/>
-
     <!-- 引入系统级切面 -->
     <import resource="classpath:/applicationContext-aop.xml"/>
 

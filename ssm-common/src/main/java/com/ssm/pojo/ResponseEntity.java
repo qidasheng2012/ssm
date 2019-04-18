@@ -5,6 +5,7 @@ import com.ssm.constant.Constants;
 import java.io.Serializable;
 
 /**
+ * 统一响应格式
  * @author qp
  * @date 2019/5/1
  */

@@ -2,13 +2,37 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:context="http://www.springframework.org/schema/context"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:mvc="http://www.springframework.org/schema/mvc"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	   http://www.springframework.org/schema/mvc
+	   http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
 	   http://www.springframework.org/schema/context
 	   http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
 	<!-- 组件扫描 -->
-	<context:component-scan base-package="com.ssm"/>
+	<context:component-scan base-package="com.ssm.controller"/>
+
+	<!-- 开启SpringMVC注解模式 -->
+	<!-- 简化配置:
+       1、自动注册DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
+       2、提供一系列:数据绑定,数字和日期的format,@NumberFormat,@DataTimeFormat,xml,json默认读写支持 -->
+	<mvc:annotation-driven/>
+
+	<!-- 对静态资源的访问 -->
+	<mvc:resources location="/js/" mapping="/js/**"/>
+	<mvc:resources location="/css/" mapping="/css/**"/>
+
+	<!-- 静态资源默认servlet配置 -->
+	<mvc:default-servlet-handler/>
+
+	<!-- 视图解析器  -->
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+		<property name="prefix" value="/WEB-INF/view/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+
 
 	<bean name="requestMappingHandlerMapping"
 		  class='org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping'>
@@ -45,7 +69,7 @@
 		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<!-- 默认编码 -->
 		<property name="defaultEncoding" value="UTF-8" />
-		<!-- 文件大小最大值 -->
+		<!-- 文件大小最大值 100M-->
 		<property name="maxUploadSize" value="104857600" />
 		<!-- 内存中的最大值 -->
 		<property name="maxInMemorySize" value="40960" />

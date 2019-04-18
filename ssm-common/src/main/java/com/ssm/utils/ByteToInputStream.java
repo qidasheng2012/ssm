@@ -9,10 +9,21 @@ import java.io.*;
  */
 public class ByteToInputStream {
 
+	/**
+	 * 字节数组 转化为 输入流InputStream
+	 * @param buf
+	 * @return
+	 */
 	public static final InputStream byte2Input(byte[] buf) {
 		return new ByteArrayInputStream(buf);
 	}
 
+	/**
+	 * 输入流 转化为 字节数组
+	 * @param inStream
+	 * @return
+	 * @throws IOException
+	 */
 	public static final byte[] input2byte(InputStream inStream) throws IOException {
 		ByteArrayOutputStream swapStream = new ByteArrayOutputStream();
 		byte[] buff = new byte[100];
@@ -24,6 +35,11 @@ public class ByteToInputStream {
 		return in2b;
 	}
 
+	/**
+	 * 根据文件路径获取字节数组
+	 * @param filePath 文件路径
+	 * @return
+	 */
 	public static byte[] File2byte(String filePath) {
 		byte[] buffer = null;
 		try {
@@ -46,6 +62,12 @@ public class ByteToInputStream {
 		return buffer;
 	}
 
+	/**
+	 * 根据字节数组生成文件
+	 * @param buf 字节数组
+	 * @param filePath 文件路径
+	 * @param fileName 文件名称
+	 */
 	public static void byte2File(byte[] buf, String filePath, String fileName) {
 		BufferedOutputStream bos = null;
 		FileOutputStream fos = null;

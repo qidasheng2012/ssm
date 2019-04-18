@@ -21,6 +21,11 @@ public class StudentController extends BaseController {
     @Autowired
     StudentService studentService;
 
+    @RequestMapping("/toListPage")
+    public String toListPage() {
+        return "student/studentList";
+    }
+
     @RequestMapping(method = { RequestMethod.POST, RequestMethod.GET }, value = "/json/findStudentListByPage")
     public void findStudentListByPage(StudentVO stu){
         ResponseEntity<List<StudentVO>> stuList = studentService.findStudentListByPage(stu);

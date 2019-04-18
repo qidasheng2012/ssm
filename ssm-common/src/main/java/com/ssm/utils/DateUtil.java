@@ -46,12 +46,12 @@ public class DateUtil {
     public static final String SHORT_DATEPATTERN = "yyyyMMdd";
 
     /**
-     * 格式化日期（yyyy-MM-dd hh:mm:ss）
+     * 格式化日期（yyyy-MM-dd hh:mm:ss）【十二小时制】
      */
     public static final String DEFAULT_DATEPATTERN = "yyyy-MM-dd hh:mm:ss";
 
     /**
-     * 格式化日期（yyyy-MM-dd HH:mm:ss）
+     * 格式化日期（yyyy-MM-dd HH:mm:ss）【二十四小时制】
      */
     public static final String DEFAULT_DATESFM = "yyyy-MM-dd HH:mm:ss";
 
