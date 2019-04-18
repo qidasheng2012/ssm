@@ -33,7 +33,6 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 
-
 	<bean name="requestMappingHandlerMapping"
 		  class='org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping'>
 	</bean>
