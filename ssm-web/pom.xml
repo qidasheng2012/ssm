@@ -117,6 +117,15 @@
         </profile>
 
         <profile>
+            <id>uat</id>
+            <build>
+                <filters>
+                    <filter>${basedir}/filters/uat/applicationContext.properties</filter>
+                </filters>
+            </build>
+        </profile>
+
+        <profile>
             <id>pro</id>
             <build>
                 <filters>
