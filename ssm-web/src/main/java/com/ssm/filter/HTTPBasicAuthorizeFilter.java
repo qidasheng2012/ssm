@@ -41,19 +41,21 @@ public class HTTPBasicAuthorizeFilter implements Filter {
         httpResponse.setHeader("Access-Control-Allow-Headers", "Content-Type,Authorization");
         httpResponse.setHeader("Access-Control-Expose-Headers", "*");
         String auth = httpRequest.getHeader(Constants.AUTHORIZATION);
-        //白名单，放过
-        if (ApiWhiteData.getWhiteApis().contains(httpRequest.getRequestURI())) {
-        	chain.doFilter(httpRequest, response);
-        	return;
+
+        // 校验是否在白名单中，在白名单中放过
+		if (ApiWhiteData.getWhiteApis().contains(httpRequest.getRequestURI())) {
+			chain.doFilter(httpRequest, response);
+			return;
 		}
 
-        //验证TOKEN
+        // 不在白名单中时，验证TOKEN
 		ResponseEntity jwt;
 		if (StringUtils.hasText(auth)) {
             jwt = JWTUtil.checkToken(auth);
 		} else{
             jwt = new ResponseEntity<>(ResponseCode.TOKEN_NO_AUTH.getCode(), ResponseCode.TOKEN_NO_AUTH.getMessage());
 		}
+
 		if (!Constants.RESPONSE_SUCCESS.equals(jwt.getCode())) {
 			PrintWriter print = httpResponse.getWriter();
 			print.write(JsonUtil.toJson(jwt));
